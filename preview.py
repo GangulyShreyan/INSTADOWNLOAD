@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog_preview(object):
     def setupUi(self, Dialog, photolink = ''):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(500, 500)
+        Dialog.resize(473, 500)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/images/images/icon.jpeg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
