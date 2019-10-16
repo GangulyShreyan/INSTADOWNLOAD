@@ -73,7 +73,9 @@ class Ui_MainWindow(object):
         self.toolButton.setText(_translate("MainWindow", "..."))
 
     def parse(self):
-        driver = webdriver.Firefox()
+        options = webdriver.firefox.options.Options()
+        options.headless = True
+        driver = webdriver.Firefox(options=options)
         driver.get(self.lineEdit.text())
         get_div = driver.find_element_by_class_name('FFVAD')
         self.photolink = get_div.get_attribute('src')
